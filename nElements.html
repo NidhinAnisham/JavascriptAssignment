@@ -1,0 +1,11 @@
+Enter number of elements required: <input type="number" id="userInput"></input>
+<input type="button" onclick="display()" value="Display"></input>
+<script>
+function display(){
+	var a = ["Superman","Batman","Spiderman","Wonder Woman","Ironman","Hulk","Black Widow","Thor","Loki","Nidhin"]
+	var no = document.getElementById("userInput").value;
+	if(no>a.length) no=a.length;
+	for(var i=a.length-no;i<a.length;i++)
+		document.write(a[i]+" ");
+}
+</script>

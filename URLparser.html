@@ -1,0 +1,38 @@
+<html>
+<script>
+function parseURL(){
+	var parser = document.createElement('a');
+	parser.href = document.getElementById("link").value;
+
+	document.getElementById("protocol").innerHTML=parser.protocol; // => "http:"
+	document.getElementById("host").innerHTML=parser.host;     // => "example.com:3000"
+	document.getElementById("hostname").innerHTML=parser.hostname; // => "example.com"
+	document.getElementById("port").innerHTML=parser.port;     // => "3000"		
+	document.getElementById("pathname").innerHTML=parser.pathname; // => "/pathname/"	
+	document.getElementById("hash").innerHTML=parser.hash;     // => "#hash"	
+	document.getElementById("search").innerHTML=parser.search;   // => "?search=test"	
+	document.getElementById("origin").innerHTML=parser.origin;
+}
+</script>
+<body>
+Enter URL: <input type="text" id="link"></input>
+<input type="submit" onclick="parseURL()"></input>
+<hr color="red">
+Protocol:<p id="protocol"></p>
+<hr color="red">
+Host:<p id="host"></p>
+<hr color="red">
+Hostname:<p id="hostname"></p>
+<hr color="red">
+Port:<p id="port"></p>
+<hr color="red">
+Pathname:<p id="pathname"></p>
+<hr color="red">
+Hash:<p id="hash"></p>
+<hr color="red">
+Search:<p id="search"></p>
+<hr color="red">
+Origin:<p id="origin"></p>
+<hr color="red">
+</html>
+

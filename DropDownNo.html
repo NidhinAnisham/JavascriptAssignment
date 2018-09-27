@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="list">
+  <option>Nidhin</option>
+  <option>Manoj</option>
+  <option>Ram</option>
+  <option>Sita</option>
+</select>
+
+<button onclick="optionsNo()">Number of Options</button>
+
+<p id="display"></p>
+
+<script>
+function optionsNo() {
+    var x = document.getElementById("list").length;
+    document.getElementById("display").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+
+<body>
+<p>Before Sorting: </p>
+<p id="displayDetails"></p>
+<br>
+<p>After Sorting by salary:</p>
+<p id="displayDetails2"></p>
+</body>
+<script>
+	var empDetails = [{name:"Superman",age:"54",band:"A3",salary:"200000"},
+					  {name:"Spiderman",age:"18",band:"B1",salary:"900000"},
+					  {name:"Batman",age:"22",band:"C1",salary:"800000"},
+					  {name:"Wonder Woman",age:"27",band:"B2",salary:"200000"},
+					  {name:"Ironman",age:"37",band:"C1",salary:"100000"}];
+	document.getElementById("displayDetails").innerHTML=JSON.stringify(empDetails);
+	empDetails.sort(function(obj1, obj2) {
+			return obj1.salary - obj2.salary;
+		});
+	document.getElementById("displayDetails2").innerHTML=JSON.stringify(empDetails);
+</script>
+</html>

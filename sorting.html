@@ -1,0 +1,43 @@
+<script>
+function selectionSort(items) {  
+    var length = items.length;
+    for (var i = 0; i < length - 1; i++) {
+        var min = i;
+        for (var j = i + 1; j < length; j++) {
+            if (items[j] < items[min]) { 
+                min = j; 
+            }
+        }
+        if (min != i) {
+            var tmp = items[i];
+            items[i] = items[min];
+            items[min] = tmp;
+        }
+    }
+}
+function bubblesort(a) {
+    var N=a.length;
+	var i=j=v=0;
+    for(i=1;i<N;i++){
+        v=a[i];
+        j=i;
+        while(j>0 && a[j-1]>v) {
+            a[j]=a[j-1];
+            j--;
+        };
+        a[j]=v;
+        
+    }
+    for(i=0;i<a.length;i++){
+        
+    };
+};
+    var x = [9,4,5,2,1,6,7,8,3];
+    document.write("<div><p>Input before bubble sort: "+x+"</p>");
+    bubblesort(x);
+    document.write("<p>Input after bubble sort: "+x+"</p></div>");
+	var y = [9,4,5,2,1,6,7,8,3];
+	document.write("<div><p>Input before selection sort: "+y+"</p>");
+    selectionSort(y);
+    document.write("<p>Input after selection sort: "+y+"</p></div>");
+</script>	

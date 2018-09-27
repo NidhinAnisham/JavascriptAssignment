@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <img src="image1.jpg" style="width:100px;height:100px;" onmousemove="myMoveFunction(this)"></img>
+  <img src="image2.jpg" style="width:80px;height:80px;" onmouseout="myEnterFunction(this)" onmouseover="myOverFunction(this)"></img>
+
+<p id="demo"> </p>
+
+<script>
+var x = open("image4.jpg");
+
+function myMoveFunction(image) {
+    image.src = "image4.jpg";
+}
+
+function myEnterFunction(image) {
+    image.src = "image4.jpg";
+}
+
+function myOverFunction(image) {
+    image.src = "image3.jpg";
+}
+</script>
+
+</body>
+</html>

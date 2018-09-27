@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Diagonal Circles</title>
+		</head>
+	
+		<body>
+			<canvas id="myCanvas" width="1500" height="800"/>
+		</body>
+		
+		<script>
+		function draw()
+		{
+			var ctx = document.getElementById("myCanvas").getContext("2d");
+			var counter = 0;
+			for (var i=0;i<5;i++)
+			{
+				for (var j=0;j<5;j++)
+				{
+					ctx.fillStyle = "rgb(" + Math.floor(255-51*i) + "," + Math.floor(255-51*i) + "," + Math.floor(255-51*j) + ")";
+					ctx.beginPath();
+					if (i === j)
+					{
+						ctx.arc(25+j*50,25+j*50,20,0,Math.PI*2);
+						ctx.fill();
+						ctx.stroke();
+					} 
+				}
+			}
+		}
+		draw();
+		</script>
+ 
+	</html>
+  
